@@ -11,12 +11,29 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="FLOW"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{51C999D6-426D-44A0-9D4A-A47F1C891EA6}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{59C19E92-AD90-4FD0-8A94-55DD1F222EA0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\D_Accident_Details"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{8c8a4d44-beac-4d14-a207-935e82c26f1b}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="D_Accident_Details"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>D_Accident_Details.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\D_Accident_Severity"
       DTS:CreationName="Microsoft.ExecutePackageTask"
@@ -211,6 +228,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 6"
       DTS:To="Package\F_Accidents" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{38163A60-3BD1-4259-966D-0A42F1F1B7BD}"
+      DTS:From="Package\D_Accident_Details"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\F_Accidents" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -223,7 +248,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="181.142857142858,42.2857142857143"
           Id="Package\D_Accident_Severity"
@@ -474,6 +499,44 @@
                     Point3="-213.25,124.977624784854" />
                   <mssgle:LineSegment
                     End="-213.25,176.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169.714285714286,42.2857142857143"
+          Id="Package\D_Accident_Details"
+          TopLeft="764.285734532372,109.006214005027" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="849.142877389515,151.291928290741">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-435.8571631038,233.708071709259"
+              Start="0,0"
+              End="-435.8571631038,226.208071709259">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,159.988436871623" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,159.988436871623"
+                    Point2="0,163.988436871623"
+                    Point3="-4,163.988436871623" />
+                  <mssgle:LineSegment
+                    End="-431.8571631038,163.988436871623" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-431.8571631038,163.988436871623"
+                    Point2="-435.8571631038,163.988436871623"
+                    Point3="-435.8571631038,167.988436871623" />
+                  <mssgle:LineSegment
+                    End="-435.8571631038,226.208071709259" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

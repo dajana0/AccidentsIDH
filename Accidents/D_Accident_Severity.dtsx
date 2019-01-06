@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="D_Accident_Severity"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{1B8460F9-62BA-4460-9F33-1F1F36993C85}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{BB0FCAF6-FE3A-45A5-A289-3B80C77D8F04}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -354,7 +354,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6CF77A17-8156-4D26-96C4-6DAA8CC6433D}"
-          SQLTask:SqlStatementSource="truncate table D_ACCIDENT_SEVERITY;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="truncate table D_ACCIDENT_SEVERITY" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -381,39 +381,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="268,42.2857142857143"
-          Id="Package\truncate table D_ACCIDENT_SEVERITY;"
-          TopLeft="175.396830043255,101.739133071359" />
-        <NodeLayout
           Size="151.428571428572,42.2857142857143"
           Id="Package\Data Flow Task"
           TopLeft="170.634925155202,235.776403625688" />
+        <NodeLayout
+          Size="268,42.2857142857143"
+          Id="Package\truncate table D_ACCIDENT_SEVERITY;"
+          TopLeft="175.396830043255,101.739133071359" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="309.396830043255,144.024847357073">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-63.0476191737666,91.7515562686155"
+              EndConnector="-63.0476191737673,91.7515562686147"
               Start="0,0"
-              End="-63.0476191737666,84.2515562686155">
+              End="-63.0476191737673,84.2515562686147">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.8757781343078" />
+                    End="0,41.8757781343074" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.8757781343078"
-                    Point2="0,45.8757781343078"
-                    Point3="-4,45.8757781343078" />
+                    Point1="0,41.8757781343074"
+                    Point2="0,45.8757781343074"
+                    Point3="-4,45.8757781343074" />
                   <mssgle:LineSegment
-                    End="-59.0476191737666,45.8757781343078" />
+                    End="-59.0476191737673,45.8757781343074" />
                   <mssgle:CubicBezierSegment
-                    Point1="-59.0476191737666,45.8757781343078"
-                    Point2="-63.0476191737666,45.8757781343078"
-                    Point3="-63.0476191737666,49.8757781343078" />
+                    Point1="-59.0476191737673,45.8757781343074"
+                    Point2="-63.0476191737673,45.8757781343074"
+                    Point3="-63.0476191737673,49.8757781343074" />
                   <mssgle:LineSegment
-                    End="-63.0476191737666,84.2515562686155" />
+                    End="-63.0476191737673,84.2515562686147" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -429,15 +429,15 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151.428571428572,42.2857142857143"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="79.0476211416659,25.8385099863768" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171.428571428572,42.2857142857143"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="112.47165830828,160.56788348677" />
+        <NodeLayout
+          Size="151.428571428572,42.2857142857143"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="79.0476211416659,25.8385099863768" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="154.761906855952,68.1242242720911">
@@ -469,7 +469,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="6.29260452080685,51.2218296073395,30.838828125,9.5732421875"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
