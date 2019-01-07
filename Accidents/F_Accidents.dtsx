@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="F_Accidents"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{85F4E1E9-2586-4FEA-A4A3-E92555D0C26A}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{110FA655-5513-4E8C-AAC0-50DC72B4A697}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1818,7 +1818,7 @@ where [refTable].[Day_dt] = ?</property>
                       lineageId="Package\Data Flow Task\D_Speed_Limit.Outputs[Lookup Match Output].Columns[SPEED_LIMIT_RK]" />
                     <inputColumn
                       refId="Package\Data Flow Task\F_Accidents_ST.Inputs[OLE DB Destination Input].Columns[TIME_RK]"
-                      cachedDataType="i8"
+                      cachedDataType="i4"
                       cachedName="TIME_RK"
                       externalMetadataColumnId="Package\Data Flow Task\F_Accidents_ST.Inputs[OLE DB Destination Input].ExternalColumns[TIME_RK]"
                       lineageId="Package\Data Flow Task\D_Time.Outputs[Lookup Match Output].Columns[TIME_RK]" />
@@ -1877,7 +1877,7 @@ where [refTable].[Day_dt] = ?</property>
                       name="SPEED_LIMIT_RK" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\F_Accidents_ST.Inputs[OLE DB Destination Input].ExternalColumns[TIME_RK]"
-                      dataType="i4"
+                      dataType="i8"
                       name="TIME_RK" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\F_Accidents_ST.Inputs[OLE DB Destination Input].ExternalColumns[ACCIDENT_DETAILS_RK]"
